@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: create file with content
+      copy:
+        dest: /opt/python2.py
+        content:
+         # add two nums
+         num3 = 150;
+         num4 = 120;
+         sum = num3 + num4;
+         print("the sum of two values is {0}".format(sum))

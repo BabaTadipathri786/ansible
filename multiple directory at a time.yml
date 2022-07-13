@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: creating multipledirectory at a time
+      file:
+        path: /opt/{{item}}
+        state: directory
+      with_items:
+      - java
+      - python
+      - azure

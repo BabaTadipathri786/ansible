@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: multiplefiles with symdol
+    file:
+      path: /opt/irfan
+      state: touch
+      owner: root
+      group: root
+      mode: u=rwx,g=rw,o=wx

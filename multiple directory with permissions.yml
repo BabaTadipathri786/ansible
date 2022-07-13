@@ -1,0 +1,15 @@
+
+---
+- hosts: all
+  tasks:
+    - name: multipledirectory with permissions
+      file:
+        path: /opt/{{item}}
+        state: directory
+        owner: root
+        group: root
+        mode: 724
+      with_items:
+      - java
+      - python
+      - azure
